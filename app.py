@@ -9,13 +9,14 @@ load_dotenv()
 db_password = os.environ["DATABASE_PASSWORD"]
 db_host = os.environ["DATABASE_HOST"]
 db_user = os.environ["DATABASE_USER"]
+db_port = os.environ["DATABASE_PORT"]
 
 var = os.getenv(".env")
 
 app = Flask(__name__)
 app.config[
     "SQLALCHEMY_DATABASE_URI"
-] = f"postgresql://{db_user}:{db_password}@{db_host}:25060/defaultdb"
+] = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/defaultdb"
 db = SQLAlchemy(app)
 migate = Migrate(app, db)
 
