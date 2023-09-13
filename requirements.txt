@@ -1,6 +1,5 @@
 psycopg2-binary
 flask
-request
 flask-sqlalchemy
 Flask-Migrate
 python-dotenv
