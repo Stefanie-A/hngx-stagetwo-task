@@ -4,4 +4,3 @@ flask-sqlalchemy
 Flask-Migrate
 python-dotenv
 gunicorn
-unittest
