@@ -34,3 +34,11 @@ Then, run the api with `python app.py` or `flask run`
 ## Usage
 
 Documentation on how to use the API can be found [here](./DOCUMENTATION.md)
+
+## Testing
+
+A unittest has been written in usertest.py and you can test the api by running
+
+```bash
+python -m unittest usertest
+```
