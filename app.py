@@ -51,7 +51,8 @@ def handle_user():
             db.session.add(new_user)
             db.session.commit()
             return {
-                "message": f"user {new_user.name} has been created successfully."
+                "user": new_user.name,
+                "id": new_user.id
             }, 201
         else:
             return {"error": "The request payload is not in JSON format"}, 400
@@ -90,4 +91,5 @@ def handle_users(user_id):
 
 
 if __name__ == "__main__":
+    app.testing = True
     app.run(debug=True)
